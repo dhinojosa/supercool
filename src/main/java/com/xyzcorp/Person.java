@@ -3,7 +3,7 @@ package com.xyzcorp;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public class Person {
+public class Person extends Object {
     private String firstName;
     private String lastName;
 

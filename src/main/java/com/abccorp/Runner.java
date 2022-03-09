@@ -1,5 +1,6 @@
 package com.abccorp;
 
+import com.xyzcorp.American;
 import com.xyzcorp.House;
 
 public class Runner {
@@ -31,6 +32,14 @@ public class Runner {
         System.out.println(p);
         System.out.println(p2);
         System.out.println(p3);
+
+        System.out.println(American.isValidAmericanSSN("421-34-1202"));
+        System.out.println(American.isValidAmericanSSN("421-34-1202"));
+        System.out.println(American.isValidAmericanSSN("421-34-1202"));
+
+        American american = new American("Lady", "Gaga", "333-12-3300");
+        System.out.println(american);
+
 
     }
 }
