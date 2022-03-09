@@ -20,11 +20,10 @@ public class Person {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        //Fira Mono - Ligatures
-        if (o == null || getClass() != o.getClass()) return false;
-        Person person = (Person) o;
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        Person person = (Person) object;
         return Objects.equals(firstName, person.firstName) && Objects.equals(lastName, person.lastName);
     }
 

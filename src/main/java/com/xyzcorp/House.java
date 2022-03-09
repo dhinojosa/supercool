@@ -1,6 +1,6 @@
 package com.xyzcorp;
 
-public class House {
+public class House{
     //member variables
     private int squareFoot;
     private boolean hasSolar;
