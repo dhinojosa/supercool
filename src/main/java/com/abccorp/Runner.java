@@ -38,6 +38,11 @@ public class Runner {
         System.out.println(American.isValidAmericanSSN("421-34-1202"));
 
         American american = new American("Lady", "Gaga", "333-12-3300");
+        try {
+            American american2 = new American("Tom", "Hanks", "333-12-33re");
+        } catch (RuntimeException e) {
+            System.out.println("oops, my bad");
+        }
         System.out.println(american);
 
 
