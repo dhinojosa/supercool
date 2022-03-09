@@ -1,6 +1,7 @@
 package com.xyzcorp;
 
 import java.util.Objects;
+import java.util.StringJoiner;
 
 public class Person {
     private String firstName;
@@ -30,5 +31,13 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(firstName, lastName);
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Person.class.getSimpleName() + "[", "]")
+            .add("firstName='" + firstName + "'")
+            .add("lastName='" + lastName + "'")
+            .toString();
     }
 }

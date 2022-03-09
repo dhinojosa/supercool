@@ -26,5 +26,11 @@ public class Runner {
         System.out.println(p.hashCode());
         System.out.println(p2.hashCode());
 
+        com.xyzcorp.Person p3 = new com.xyzcorp.Person("Brandon", "Larson");
+
+        System.out.println(p);
+        System.out.println(p2);
+        System.out.println(p3);
+
     }
 }
