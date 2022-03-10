@@ -3,7 +3,7 @@ package com.xyzcorp;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public class Person extends Object implements Comparable<Person> {
+public class Person implements Comparable<Person> {
     private String firstName;
     private String lastName;
 
