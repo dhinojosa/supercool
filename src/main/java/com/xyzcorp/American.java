@@ -1,5 +1,6 @@
 package com.xyzcorp;
 
+import java.util.StringJoiner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -23,5 +24,14 @@ public class American extends Person {
 
     public String getSsn() {
         return ssn;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", American.class.getSimpleName() + "[", "]")
+            .add("firstName='" + super.getFirstName() + "'")
+            .add("lastName='" + super.getLastName() + "'")
+            .add("ssn='" + ssn + "'")
+            .toString();
     }
 }
