@@ -3,7 +3,7 @@ package com.xyzcorp;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public class Person extends Object {
+public class Person extends Object implements Comparable<Person> {
     private String firstName;
     private String lastName;
 
@@ -39,5 +39,10 @@ public class Person extends Object {
             .add("firstName='" + firstName + "'")
             .add("lastName='" + lastName + "'")
             .toString();
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return this.firstName.compareTo(o.firstName);
     }
 }
