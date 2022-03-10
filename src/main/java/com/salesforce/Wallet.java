@@ -13,6 +13,9 @@ public class Wallet {
     }
 
     public void addMoney(int amount) {
+        if (amount < 0)
+            throw new IllegalArgumentException
+                ("Cannot accept negative amounts");
         this.balance = amount;
     }
 

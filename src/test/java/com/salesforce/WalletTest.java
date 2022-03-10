@@ -1,8 +1,10 @@
 package com.salesforce;
 
+import org.assertj.core.api.ThrowableAssert;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class WalletTest {
     //ZOMBIES
@@ -35,6 +37,10 @@ public class WalletTest {
         assertThat(wallet.isEmpty()).isTrue();
     }
 
-    //TODO:
-    // testThatIcannotAddANegativeAmountToMyWallet
+    @Test
+    public void testThatICannotAddANegativeAmountToMyWallet() {
+        Wallet wallet = new Wallet();
+        assertThatThrownBy(() -> wallet.addMoney(-10))
+            .isInstanceOf(IllegalArgumentException.class);
+    }
 }
